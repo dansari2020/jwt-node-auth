@@ -2,12 +2,9 @@
   "name": "jwt-node-auth",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env NODE_ENV=development nodemon index.js",
-    "build": "netlify-lambda build src",
-    "start": "nodemon index.js"
+    "dev": "netlify-lambda serve functions",
+    "build": "netlify-lambda build functions"
   },
   "repository": {
     "type": "git",
