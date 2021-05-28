@@ -1,0 +1,14 @@
+[build]
+  command = "npm install && npm run build"
+  publish = "publish"
+  functions = "functions"
+[dev]
+  command = "npm run dev:netlify"
+
+[[plugins]]
+package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  buildDir = "publish"
+  exclude = ['./publish/404.html']
+  baseUrl = "https://trynetlify.netlify.com"
