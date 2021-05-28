@@ -1,13 +1,6 @@
 [build]
   command = "npm run build"
-  functions = "src/functions"
-  NODE_ENV = "12"
-  publish = "/dist"
-
-[dev]
-  port = 8080
-  publish = "/dist"
-  command = "npm run dev"
+  functions = ".netlify/functions/"
 
 [[redirects]]
   from = "/api/*"
