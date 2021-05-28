@@ -36,5 +36,17 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-functions
+# dev environment variables
 .env
+
+# macOS related files
+.DS_Store
+
+# Local Netlify folder
+.netlify
+
+# Distribution folder
+dist/
+
+# cache folder
+.cache

@@ -1,14 +1,15 @@
 [build]
-  command = "npm install && npm run build"
-  publish = "publish"
-  functions = "functions"
+  command = "npm run build"
+  functions = "src/functions"
+  NODE_ENV = "12"
+  publish = "/dist"
+
 [dev]
-  command = "npm run dev:netlify"
+  port = 8080
+  publish = "/dist"
+  command = "npm run dev"
 
-[[plugins]]
-package = "@netlify/plugin-sitemap"
-
-  [plugins.inputs]
-  buildDir = "publish"
-  exclude = ['./publish/404.html']
-  baseUrl = "https://trynetlify.netlify.com"
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
